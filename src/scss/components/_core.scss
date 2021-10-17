@@ -46,6 +46,7 @@
     display: flex;
     min-width: $grid-config-string-width-min;
     width: $grid-config-string-width-default;
+    margin: 0 auto;
 
     @for $i from 1 through $grid-config-string-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}t#{$i}"] {
