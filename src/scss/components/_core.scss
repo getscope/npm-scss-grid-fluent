@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+.#{$grid-config-module-name} {
+    min-width: $grid-config-module-width-min;
+    width: $grid-config-module-width-default;
+
+    @for $i from 1 through $grid-config-module-count {
+        &[#{$grid-option-spacing-name}~="#{$grid-config-module-prefix}t#{$i}"] {
+            padding-top: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
+
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-module-prefix}b#{$i}"] {
+            padding-bottom: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-module-prefix}y#{$i}"] {
+            padding-top: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
+            padding-bottom: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
+        }
+    }
+}
+
+.#{$grid-config-region-name} {
+    min-width: $grid-config-region-width-min;
+    width: $grid-config-region-width-default;
+
+    @for $i from 1 through $grid-config-region-count {
+        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}t#{$i}"] {
+            padding-top: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
+
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}b#{$i}"] {
+            padding-bottom: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}y#{$i}"] {
+            padding-top: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-bottom: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+    }
+}
+
+.#{$grid-config-string-name} {
+    display: flex;
+    min-width: $grid-config-string-width-min;
+    width: $grid-config-string-width-default;
+
+    @for $i from 1 through $grid-config-string-count {
+        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}t#{$i}"] {
+            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}b#{$i}"] {
+            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}y#{$i}"] {
+            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+    }
+
+    @for $i from 1 through $grid-config-column-count {
+        &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}x#{$i}"] > .#{$grid-config-column-name} {
+            padding-right: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-left: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+    }
+}
+
+.#{$grid-config-column-name} {
+    height: 80px;
+    background-color: green;
+
+    &:nth-of-type(2n+1) {
+        background-color: #0b2e13;
+    }
+
+    @for $i from 1 through $grid-config-column-count {
+        &[#{$grid-option-size-name}="#{$i}"] {
+            min-width: ($grid-config-string-width-min/$grid-config-column-count) * $i;
+            width: ($grid-config-string-width-default/$grid-config-column-count) * $i;
+        }
+    }
+
+    &[#{$grid-option-spacing-name}="none"] {
+        padding: 0 !important;
+    }
+
+    @for $i from 1 through $grid-config-column-count {
+
+        &[#{$grid-option-spacing-name}="t#{$i}"] {
+            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+
+        &[#{$grid-option-spacing-name}="r#{$i}"] {
+            padding-right: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100% !important;
+        }
+
+        &[#{$grid-option-spacing-name}="b#{$i}"] {
+            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+
+        &[#{$grid-option-spacing-name}="l#{$i}"] {
+            padding-left: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100% !important;
+        }
+
+        &[#{$grid-option-spacing-name}="x#{$i}"] {
+            padding-right: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100% !important;
+            padding-left: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100% !important;
+        }
+
+        &[#{$grid-option-spacing-name}="y#{$i}"] {
+            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+    }
+}
