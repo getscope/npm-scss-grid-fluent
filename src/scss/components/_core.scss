@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-// Основные настройки модуля.
+// Основные настройки модулей.
 .#{$grid-config-module-name} {
     min-width: $grid-config-module-width-min;
     width: $grid-config-module-width-default;
@@ -22,7 +22,7 @@
     }
 }
 
-// Основные настройки региона.
+// Основные настройки регионов.
 .#{$grid-config-region-name} {
     min-width: $grid-config-region-width-min;
     width: $grid-config-region-width-default;
@@ -44,7 +44,7 @@
     }
 }
 
-// Основные настройки строки.
+// Основные настройки строк.
 .#{$grid-config-string-name} {
     display: flex;
     min-width: $grid-config-string-width-min;
@@ -101,7 +101,7 @@
     }
 }
 
-// Основные настройки колонки.
+// Основные настройки колонок.
 .#{$grid-config-column-name} {
 
     // Размеры колонок.
