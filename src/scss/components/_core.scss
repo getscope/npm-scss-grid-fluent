@@ -1,74 +1,181 @@
 @charset "UTF-8";
 
-// Основные настройки модулей.
+// Основные настройки модуля.
 .#{$grid-config-module-name} {
     min-width: $grid-config-module-width-min;
+    max-width: $grid-config-module-width-max;
     width: $grid-config-module-width-default;
 
-    // Интервалы модулей.
+    // Настройки интервалов родительского элемента.
     @for $i from 1 through $grid-config-module-count {
-        &[#{$grid-option-spacing-name}~="#{$grid-config-module-prefix}t#{$i}"] {
-            padding-top: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
+        &[#{$grid-option-spacing-name}~="t#{$i}"] {
+            padding-top: $grid-config-module-spacing * $i;
         }
 
-        &[#{$grid-option-spacing-name}~="#{$grid-config-module-prefix}b#{$i}"] {
-            padding-bottom: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
+        &[#{$grid-option-spacing-name}~="r#{$i}"] {
+            padding-right: $grid-config-module-spacing * $i;
         }
 
-        &[#{$grid-option-spacing-name}~="#{$grid-config-module-prefix}y#{$i}"] {
-            padding-top: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
-            padding-bottom: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
+        &[#{$grid-option-spacing-name}~="b#{$i}"] {
+            padding-bottom: $grid-config-module-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="l#{$i}"] {
+            padding-left: $grid-config-module-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="y#{$i}"] {
+            padding-top: $grid-config-module-spacing * $i;
+            padding-bottom: $grid-config-module-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="x#{$i}"] {
+            padding-right: $grid-config-module-spacing * $i;
+            padding-left: $grid-config-module-spacing * $i;
+        }
+    }
+
+    // Настройки интервалов дочернего элемента.
+    @for $i from 1 through $grid-config-region-count {
+        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}t#{$i}"] > .#{$grid-config-region-name} {
+            padding-top: $grid-config-region-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}r#{$i}"] > .#{$grid-config-region-name} {
+            padding-right: $grid-config-region-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}b#{$i}"] > .#{$grid-config-region-name} {
+            padding-bottom: $grid-config-region-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}l#{$i}"] > .#{$grid-config-region-name} {
+            padding-left: $grid-config-region-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}y#{$i}"] > .#{$grid-config-region-name} {
+            padding-top: $grid-config-region-spacing * $i;
+            padding-bottom: $grid-config-region-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}x#{$i}"] > .#{$grid-config-region-name} {
+            padding-right: $grid-config-region-spacing * $i;
+            padding-left: $grid-config-region-spacing * $i;
         }
     }
 }
 
-// Основные настройки регионов.
+// Основные настройки региона.
 .#{$grid-config-region-name} {
     min-width: $grid-config-region-width-min;
+    max-width: $grid-config-region-width-max;
     width: $grid-config-region-width-default;
 
-    // Интервалы регионов.
+    // Настройки интервалов родительского элемента.
+    &[#{$grid-option-spacing-name}="none"] {
+        padding: 0 !important;
+    }
+
     @for $i from 1 through $grid-config-region-count {
-        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}t#{$i}"] {
-            padding-top: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
+        &[#{$grid-option-spacing-name}~="t#{$i}"] {
+            padding-top: $grid-config-region-spacing * $i;
         }
 
-        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}b#{$i}"] {
-            padding-bottom: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
+        &[#{$grid-option-spacing-name}~="r#{$i}"] {
+            padding-right: $grid-config-region-spacing * $i;
         }
 
-        &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}y#{$i}"] {
-            padding-top: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
-            padding-bottom: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
+        &[#{$grid-option-spacing-name}~="b#{$i}"] {
+            padding-bottom: $grid-config-region-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="l#{$i}"] {
+            padding-left: $grid-config-region-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="y#{$i}"] {
+            padding-top: $grid-config-region-spacing * $i;
+            padding-bottom: $grid-config-region-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="x#{$i}"] {
+            padding-right: $grid-config-region-spacing * $i;
+            padding-left: $grid-config-region-spacing * $i;
+        }
+    }
+
+    // Настройки интервалов дочернего элемента.
+    @for $i from 1 through $grid-config-region-count {
+        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}t#{$i}"] > .#{$grid-config-string-name} {
+            padding-top: $grid-config-string-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}r#{$i}"] > .#{$grid-config-string-name} {
+            padding-right: $grid-config-string-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}b#{$i}"] > .#{$grid-config-string-name} {
+            padding-bottom: $grid-config-string-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}l#{$i}"] > .#{$grid-config-string-name} {
+            padding-left: $grid-config-string-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}y#{$i}"] > .#{$grid-config-string-name} {
+            padding-top: $grid-config-string-spacing * $i;
+            padding-bottom: $grid-config-string-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}x#{$i}"] > .#{$grid-config-string-name} {
+            padding-right: $grid-config-string-spacing * $i;
+            padding-left: $grid-config-string-spacing * $i;
         }
     }
 }
 
-// Основные настройки строк.
+// Основные настройки строки.
 .#{$grid-config-string-name} {
     display: flex;
     min-width: $grid-config-string-width-min;
-    width: $grid-config-string-width-default;
     max-width: $grid-config-string-width-max;
+    width: $grid-config-string-width-default;
     margin: 0 auto;
 
-    // Интервалы строк.
+    // Настройки интервалов элемента.
+    &[#{$grid-option-spacing-name}="none"] {
+        padding: 0 !important;
+    }
+
     @for $i from 1 through $grid-config-string-count {
-        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}t#{$i}"] {
-            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        &[#{$grid-option-spacing-name}~="t#{$i}"] {
+            padding-top: $grid-config-string-spacing * $i;
         }
 
-        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}b#{$i}"] {
-            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        &[#{$grid-option-spacing-name}~="r#{$i}"] {
+            padding-right: $grid-config-string-spacing * $i;
         }
 
-        &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}y#{$i}"] {
-            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
-            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        &[#{$grid-option-spacing-name}~="b#{$i}"] {
+            padding-bottom: $grid-config-string-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="l#{$i}"] {
+            padding-left: $grid-config-string-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="y#{$i}"] {
+            padding-top: $grid-config-string-spacing * $i;
+            padding-bottom: $grid-config-string-spacing * $i;
+        }
+
+        &[#{$grid-option-spacing-name}~="x#{$i}"] {
+            padding-right: $grid-config-string-spacing * $i;
+            padding-left: $grid-config-string-spacing * $i;
         }
     }
 
-    // Смещения колонок.
+    // Настройки смещения дочернего элемента.
     @for $i from 1 through $grid-config-column-count {
         &[#{$grid-option-offset-name}~="#{$grid-config-column-prefix}r#{$i}"] > .#{$grid-config-column-name} {
             margin-right: ($grid-config-string-width-default/$grid-config-column-count) * $i;
@@ -84,48 +191,48 @@
         }
     }
 
-    // Интервалы колонок.
+    // Настройки интервалов дочернего элемента.
     @for $i from 1 through $grid-config-column-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}t#{$i}"] > .#{$grid-config-column-name} {
-            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-top: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}r#{$i}"] > .#{$grid-config-column-name} {
-            padding-right: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-right: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}b#{$i}"] > .#{$grid-config-column-name} {
-            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-bottom: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}l#{$i}"] > .#{$grid-config-column-name} {
-            padding-left: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-left: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}y#{$i}"] > .#{$grid-config-column-name} {
-            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
-            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-top: $grid-config-column-spacing * $i;
+            padding-bottom: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}x#{$i}"] > .#{$grid-config-column-name} {
-            padding-right: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
-            padding-left: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-right: $grid-config-column-spacing * $i;
+            padding-left: $grid-config-column-spacing * $i;
         }
     }
 }
 
-// Основные настройки колонок.
+// Основные настройки колонки.
 .#{$grid-config-column-name} {
 
-    // Размеры колонок.
     @for $i from 1 through $grid-config-column-count {
         &[#{$grid-option-size-name}="#{$i}"] {
-            min-width: ($grid-config-string-width-min/$grid-config-column-count) * $i;
-            width: ($grid-config-string-width-default/$grid-config-column-count) * $i;
+            min-width: ($grid-config-string-width-min / $grid-config-column-count) * $i;
+            max-width: ($grid-config-string-width-max / $grid-config-column-count) * $i;
+            width: ($grid-config-string-width-default / $grid-config-column-count) * $i;
         }
     }
 
-    // Смещения колонок.
+    // Настройки смещения элемента.
     @for $i from 1 through $grid-config-column-count {
         &[#{$grid-option-offset-name}~="r#{$i}"] {
             margin-right: ($grid-config-string-width-default/$grid-config-column-count) * $i;
@@ -141,36 +248,36 @@
         }
     }
 
-    // Интервалы колонок.
+    // Настройки интервалов элемента.
     &[#{$grid-option-spacing-name}="none"] {
         padding: 0 !important;
     }
 
     @for $i from 1 through $grid-config-column-count {
         &[#{$grid-option-spacing-name}~="t#{$i}"] {
-            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-top: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="r#{$i}"] {
-            padding-right: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100% !important;
+            padding-right: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="b#{$i}"] {
-            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-bottom: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="l#{$i}"] {
-            padding-left: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100% !important;
+            padding-left: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="y#{$i}"] {
-            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
-            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-top: $grid-config-column-spacing * $i;
+            padding-bottom: $grid-config-column-spacing * $i;
         }
 
         &[#{$grid-option-spacing-name}~="x#{$i}"] {
-            padding-right: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100% !important;
-            padding-left: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100% !important;
+            padding-right: $grid-config-column-spacing * $i;
+            padding-left: $grid-config-column-spacing * $i;
         }
     }
 }
