@@ -142,6 +142,11 @@
     width: $grid-config-string-width-default;
     margin: 0 auto;
 
+    // Настройки обтекания элемента.
+    &[#{$grid-option-wrap-name}="true"] {
+        flex-wrap: wrap;
+    }
+
     // Настройки интервалов элемента.
     &[#{$grid-option-spacing-name}="none"] {
         padding: 0 !important;
