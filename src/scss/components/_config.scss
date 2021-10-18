@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-$grid-config-module-name: 'grid-module';
-$grid-config-module-prefix: 'mod-';
-$grid-config-module-width-default: 100%;
-$grid-config-module-width-min: 100%;
-$grid-config-module-width-max: 100%;
-$grid-config-module-count: 12;
-$grid-config-module-spacing-x: 1%;
-$grid-config-module-spacing-y: 0.5%;
+$grid-config-template-name: 'grid-template';
+$grid-config-template-prefix: 'mod-';
+$grid-config-template-width-default: 100%;
+$grid-config-template-width-min: 100%;
+$grid-config-template-width-max: 100%;
+$grid-config-template-count: 12;
+$grid-config-template-spacing-x: 1%;
+$grid-config-template-spacing-y: 0.5%;
 
 $grid-config-region-name: 'grid-region';
 $grid-config-region-prefix: 'reg-';
