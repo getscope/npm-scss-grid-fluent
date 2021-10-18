@@ -18,6 +18,7 @@ $grid-config-string-name: 'grid-string';
 $grid-config-string-prefix: 'str-';
 $grid-config-string-width-default: 100%;
 $grid-config-string-width-min: 1200px;
+$grid-config-string-width-max: 100%;
 $grid-config-string-count: 12;
 $grid-config-string-spacing: 8px;
 
@@ -27,4 +28,5 @@ $grid-config-column-count: 12;
 $grid-config-column-spacing: 8px;
 
 $grid-option-size-name: 'data-grid-size';
+$grid-option-offset-name: 'data-grid-offset';
 $grid-option-spacing-name: 'data-grid-spacing';
