@@ -5,7 +5,7 @@
     min-width: $grid-config-module-width-min;
     width: $grid-config-module-width-default;
 
-    // Смещения модулей.
+    // Интервалы модулей.
     @for $i from 1 through $grid-config-module-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-module-prefix}t#{$i}"] {
             padding-top: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
@@ -27,7 +27,7 @@
     min-width: $grid-config-region-width-min;
     width: $grid-config-region-width-default;
 
-    // Смещения регионов.
+    // Интервалы регионов.
     @for $i from 1 through $grid-config-region-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}t#{$i}"] {
             padding-top: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
@@ -52,7 +52,7 @@
     max-width: $grid-config-string-width-max;
     margin: 0 auto;
 
-    // Смещения строк.
+    // Интервалы строк.
     @for $i from 1 through $grid-config-string-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}t#{$i}"] {
             padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
