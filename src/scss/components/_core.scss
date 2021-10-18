@@ -7,7 +7,6 @@
     @for $i from 1 through $grid-config-module-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-module-prefix}t#{$i}"] {
             padding-top: ($grid-config-module-spacing / $grid-config-module-width-min * $i) * 100%;
-
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-module-prefix}b#{$i}"] {
@@ -28,7 +27,6 @@
     @for $i from 1 through $grid-config-region-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}t#{$i}"] {
             padding-top: ($grid-config-region-spacing / $grid-config-string-width-min * $i) * 100%;
-
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}b#{$i}"] {
