@@ -86,12 +86,25 @@
 
     // Интервалы колонок.
     @for $i from 1 through $grid-config-column-count {
+        &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}t#{$i}"] > .#{$grid-config-column-name} {
+            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}r#{$i}"] > .#{$grid-config-column-name} {
             padding-right: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
         }
 
+        &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}b#{$i}"] > .#{$grid-config-column-name} {
+            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}l#{$i}"] > .#{$grid-config-column-name} {
             padding-left: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+        }
+
+        &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}y#{$i}"] > .#{$grid-config-column-name} {
+            padding-top: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
+            padding-bottom: ($grid-config-column-spacing / $grid-config-string-width-min * $i) * 100%;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}x#{$i}"] > .#{$grid-config-column-name} {
