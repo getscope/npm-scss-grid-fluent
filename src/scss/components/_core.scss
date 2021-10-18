@@ -9,58 +9,58 @@
     // Настройки интервалов родительского элемента.
     @for $i from 1 through $grid-config-module-count {
         &[#{$grid-option-spacing-name}~="t#{$i}"] {
-            padding-top: $grid-config-module-spacing * $i;
+            padding-top: $grid-config-module-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="r#{$i}"] {
-            padding-right: $grid-config-module-spacing * $i;
+            padding-right: $grid-config-module-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="b#{$i}"] {
-            padding-bottom: $grid-config-module-spacing * $i;
+            padding-bottom: $grid-config-module-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="l#{$i}"] {
-            padding-left: $grid-config-module-spacing * $i;
+            padding-left: $grid-config-module-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="y#{$i}"] {
-            padding-top: $grid-config-module-spacing * $i;
-            padding-bottom: $grid-config-module-spacing * $i;
+            padding-top: $grid-config-module-spacing-y * $i;
+            padding-bottom: $grid-config-module-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="x#{$i}"] {
-            padding-right: $grid-config-module-spacing * $i;
-            padding-left: $grid-config-module-spacing * $i;
+            padding-right: $grid-config-module-spacing-x * $i;
+            padding-left: $grid-config-module-spacing-x * $i;
         }
     }
 
     // Настройки интервалов дочернего элемента.
     @for $i from 1 through $grid-config-region-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}t#{$i}"] > .#{$grid-config-region-name} {
-            padding-top: $grid-config-region-spacing * $i;
+            padding-top: $grid-config-region-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}r#{$i}"] > .#{$grid-config-region-name} {
-            padding-right: $grid-config-region-spacing * $i;
+            padding-right: $grid-config-region-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}b#{$i}"] > .#{$grid-config-region-name} {
-            padding-bottom: $grid-config-region-spacing * $i;
+            padding-bottom: $grid-config-region-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}l#{$i}"] > .#{$grid-config-region-name} {
-            padding-left: $grid-config-region-spacing * $i;
+            padding-left: $grid-config-region-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}y#{$i}"] > .#{$grid-config-region-name} {
-            padding-top: $grid-config-region-spacing * $i;
-            padding-bottom: $grid-config-region-spacing * $i;
+            padding-top: $grid-config-region-spacing-y * $i;
+            padding-bottom: $grid-config-region-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-region-prefix}x#{$i}"] > .#{$grid-config-region-name} {
-            padding-right: $grid-config-region-spacing * $i;
-            padding-left: $grid-config-region-spacing * $i;
+            padding-right: $grid-config-region-spacing-x * $i;
+            padding-left: $grid-config-region-spacing-x * $i;
         }
     }
 }
@@ -78,58 +78,58 @@
 
     @for $i from 1 through $grid-config-region-count {
         &[#{$grid-option-spacing-name}~="t#{$i}"] {
-            padding-top: $grid-config-region-spacing * $i;
+            padding-top: $grid-config-region-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="r#{$i}"] {
-            padding-right: $grid-config-region-spacing * $i;
+            padding-right: $grid-config-region-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="b#{$i}"] {
-            padding-bottom: $grid-config-region-spacing * $i;
+            padding-bottom: $grid-config-region-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="l#{$i}"] {
-            padding-left: $grid-config-region-spacing * $i;
+            padding-left: $grid-config-region-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="y#{$i}"] {
-            padding-top: $grid-config-region-spacing * $i;
-            padding-bottom: $grid-config-region-spacing * $i;
+            padding-top: $grid-config-region-spacing-y * $i;
+            padding-bottom: $grid-config-region-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="x#{$i}"] {
-            padding-right: $grid-config-region-spacing * $i;
-            padding-left: $grid-config-region-spacing * $i;
+            padding-right: $grid-config-region-spacing-x * $i;
+            padding-left: $grid-config-region-spacing-x * $i;
         }
     }
 
     // Настройки интервалов дочернего элемента.
     @for $i from 1 through $grid-config-region-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}t#{$i}"] > .#{$grid-config-string-name} {
-            padding-top: $grid-config-string-spacing * $i;
+            padding-top: $grid-config-string-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}r#{$i}"] > .#{$grid-config-string-name} {
-            padding-right: $grid-config-string-spacing * $i;
+            padding-right: $grid-config-string-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}b#{$i}"] > .#{$grid-config-string-name} {
-            padding-bottom: $grid-config-string-spacing * $i;
+            padding-bottom: $grid-config-string-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}l#{$i}"] > .#{$grid-config-string-name} {
-            padding-left: $grid-config-string-spacing * $i;
+            padding-left: $grid-config-string-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}y#{$i}"] > .#{$grid-config-string-name} {
-            padding-top: $grid-config-string-spacing * $i;
-            padding-bottom: $grid-config-string-spacing * $i;
+            padding-top: $grid-config-string-spacing-y * $i;
+            padding-bottom: $grid-config-string-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-string-prefix}x#{$i}"] > .#{$grid-config-string-name} {
-            padding-right: $grid-config-string-spacing * $i;
-            padding-left: $grid-config-string-spacing * $i;
+            padding-right: $grid-config-string-spacing-x * $i;
+            padding-left: $grid-config-string-spacing-x * $i;
         }
     }
 }
@@ -154,29 +154,29 @@
 
     @for $i from 1 through $grid-config-string-count {
         &[#{$grid-option-spacing-name}~="t#{$i}"] {
-            padding-top: $grid-config-string-spacing * $i;
+            padding-top: $grid-config-string-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="r#{$i}"] {
-            padding-right: $grid-config-string-spacing * $i;
+            padding-right: $grid-config-string-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="b#{$i}"] {
-            padding-bottom: $grid-config-string-spacing * $i;
+            padding-bottom: $grid-config-string-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="l#{$i}"] {
-            padding-left: $grid-config-string-spacing * $i;
+            padding-left: $grid-config-string-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="y#{$i}"] {
-            padding-top: $grid-config-string-spacing * $i;
-            padding-bottom: $grid-config-string-spacing * $i;
+            padding-top: $grid-config-string-spacing-y * $i;
+            padding-bottom: $grid-config-string-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="x#{$i}"] {
-            padding-right: $grid-config-string-spacing * $i;
-            padding-left: $grid-config-string-spacing * $i;
+            padding-right: $grid-config-string-spacing-x * $i;
+            padding-left: $grid-config-string-spacing-x * $i;
         }
     }
 
@@ -199,29 +199,29 @@
     // Настройки интервалов дочернего элемента.
     @for $i from 1 through $grid-config-column-count {
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}t#{$i}"] > .#{$grid-config-column-name} {
-            padding-top: $grid-config-column-spacing * $i;
+            padding-top: $grid-config-column-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}r#{$i}"] > .#{$grid-config-column-name} {
-            padding-right: $grid-config-column-spacing * $i;
+            padding-right: $grid-config-column-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}b#{$i}"] > .#{$grid-config-column-name} {
-            padding-bottom: $grid-config-column-spacing * $i;
+            padding-bottom: $grid-config-column-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}l#{$i}"] > .#{$grid-config-column-name} {
-            padding-left: $grid-config-column-spacing * $i;
+            padding-left: $grid-config-column-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}y#{$i}"] > .#{$grid-config-column-name} {
-            padding-top: $grid-config-column-spacing * $i;
-            padding-bottom: $grid-config-column-spacing * $i;
+            padding-top: $grid-config-column-spacing-y * $i;
+            padding-bottom: $grid-config-column-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="#{$grid-config-column-prefix}x#{$i}"] > .#{$grid-config-column-name} {
-            padding-right: $grid-config-column-spacing * $i;
-            padding-left: $grid-config-column-spacing * $i;
+            padding-right: $grid-config-column-spacing-x * $i;
+            padding-left: $grid-config-column-spacing-x * $i;
         }
     }
 }
@@ -260,29 +260,29 @@
 
     @for $i from 1 through $grid-config-column-count {
         &[#{$grid-option-spacing-name}~="t#{$i}"] {
-            padding-top: $grid-config-column-spacing * $i;
+            padding-top: $grid-config-column-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="r#{$i}"] {
-            padding-right: $grid-config-column-spacing * $i;
+            padding-right: $grid-config-column-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="b#{$i}"] {
-            padding-bottom: $grid-config-column-spacing * $i;
+            padding-bottom: $grid-config-column-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="l#{$i}"] {
-            padding-left: $grid-config-column-spacing * $i;
+            padding-left: $grid-config-column-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="y#{$i}"] {
-            padding-top: $grid-config-column-spacing * $i;
-            padding-bottom: $grid-config-column-spacing * $i;
+            padding-top: $grid-config-column-spacing-y * $i;
+            padding-bottom: $grid-config-column-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="x#{$i}"] {
-            padding-right: $grid-config-column-spacing * $i;
-            padding-left: $grid-config-column-spacing * $i;
+            padding-right: $grid-config-column-spacing-x * $i;
+            padding-left: $grid-config-column-spacing-x * $i;
         }
     }
 }
