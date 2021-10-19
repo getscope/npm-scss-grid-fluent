@@ -147,6 +147,11 @@
         flex-wrap: wrap;
     }
 
+    // Настройки выравнивания элемента.
+    &[#{$grid-option-align-name}~="y-center"] {
+        align-items: center;
+    }
+
     // Настройки интервалов элемента.
     &[#{$grid-option-spacing-name}="none"] {
         padding: 0 !important;
