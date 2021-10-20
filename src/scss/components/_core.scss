@@ -136,20 +136,78 @@
 
 // Основные настройки строки.
 .#{$grid-config-string-name} {
-    display: flex;
     min-width: $grid-config-string-width-min;
     max-width: $grid-config-string-width-max;
     width: $grid-config-string-width-default;
     margin: 0 auto;
 
-    // Настройки обтекания элемента.
-    &[#{$grid-option-wrap-name}="true"] {
+    // Базовые настройки элемента.
+    &[#{$grid-option-type-name}~="flex"] {
+        display: flex;
+    }
+
+    &[#{$grid-option-type-name}~="wrap"] {
         flex-wrap: wrap;
     }
 
-    // Настройки выравнивания элемента.
-    &[#{$grid-option-align-name}~="y-center"] {
+    &[#{$grid-option-type-name}~="column"] {
+        flex-direction: column;
+    }
+
+    &[#{$grid-option-type-name}~="column-reverse"] {
+        flex-direction: column-reverse;
+    }
+
+    &[#{$grid-option-type-name}~="string"] {
+        flex-direction: row;
+    }
+
+    &[#{$grid-option-type-name}~="string-reverse"] {
+        flex-direction: row-reverse;
+    }
+
+    &[#{$grid-option-direction-name}~="x-content-start"] {
+        justify-content: flex-start;
+    }
+
+    &[#{$grid-option-direction-name}~="x-content-center"] {
+        justify-content: center;
+    }
+
+    &[#{$grid-option-direction-name}~="x-content-end"] {
+        justify-content: flex-end;
+    }
+
+    &[#{$grid-option-direction-name}~="x-content-between"] {
+        justify-content: space-between;
+    }
+
+    &[#{$grid-option-direction-name}~="x-content-around"] {
+        justify-content: space-around;
+    }
+
+    &[#{$grid-option-direction-name}~="y-content-start"] {
+        align-content: flex-start;
+    }
+
+    &[#{$grid-option-direction-name}~="y-content-center"] {
+        align-content: center;
+    }
+
+    &[#{$grid-option-direction-name}~="y-content-end"] {
+        align-content: flex-end;
+    }
+
+    &[#{$grid-option-direction-name}~="y-items-start"] {
+        align-items: flex-start;
+    }
+
+    &[#{$grid-option-direction-name}~="y-items-center"] {
         align-items: center;
+    }
+
+    &[#{$grid-option-direction-name}~="y-items-end"] {
+        align-items: flex-end;
     }
 
     // Настройки интервалов элемента.
