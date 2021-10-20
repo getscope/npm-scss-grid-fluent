@@ -74,8 +74,8 @@ $grid-config-column-count: 12;
 $grid-config-column-spacing-x: 1%;
 $grid-config-column-spacing-y: 0.5%;
 
-$grid-option-wrap-name: 'data-grid-wrap';
-$grid-option-align-name: 'data-grid-align';
+$grid-option-type-name: 'data-grid-type';
+$grid-option-direction-name: 'data-grid-direction';
 $grid-option-size-name: 'data-grid-size';
 $grid-option-offset-name: 'data-grid-offset';
 $grid-option-spacing-name: 'data-grid-spacing';
