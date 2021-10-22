@@ -3,8 +3,8 @@
 // Основные настройки модуля.
 .#{$grid-config-template-name} {
     min-width: $grid-config-template-width-min;
-    max-width: $grid-config-template-width-max;
     width: $grid-config-template-width-default;
+    max-width: $grid-config-template-width-max;
 
     // Настройки интервалов родительского элемента.
     @for $i from 1 through $grid-config-template-count {
@@ -68,8 +68,8 @@
 // Основные настройки региона.
 .#{$grid-config-region-name} {
     min-width: $grid-config-region-width-min;
-    max-width: $grid-config-region-width-max;
     width: $grid-config-region-width-default;
+    max-width: $grid-config-region-width-max;
 
     // Настройки интервалов родительского элемента.
     &[#{$grid-option-spacing-name}="none"] {
@@ -137,8 +137,8 @@
 // Основные настройки строки.
 .#{$grid-config-string-name} {
     min-width: $grid-config-string-width-min;
-    max-width: $grid-config-string-width-max;
     width: $grid-config-string-width-default;
+    max-width: $grid-config-string-width-max;
     margin: 0 auto;
 
     // Базовые настройки элемента.
@@ -147,66 +147,82 @@
     }
 
     &[#{$grid-option-type-name}~="wrap"] {
+        display: flex;
         flex-wrap: wrap;
     }
 
     &[#{$grid-option-type-name}~="column"] {
+        display: flex;
         flex-direction: column;
     }
 
     &[#{$grid-option-type-name}~="column-reverse"] {
+        display: flex;
         flex-direction: column-reverse;
     }
 
     &[#{$grid-option-type-name}~="string"] {
+        display: flex;
         flex-direction: row;
     }
 
     &[#{$grid-option-type-name}~="string-reverse"] {
+        display: flex;
         flex-direction: row-reverse;
     }
 
     &[#{$grid-option-direction-name}~="x-content-start"] {
+        display: flex;
         justify-content: flex-start;
     }
 
     &[#{$grid-option-direction-name}~="x-content-center"] {
+        display: flex;
         justify-content: center;
     }
 
     &[#{$grid-option-direction-name}~="x-content-end"] {
+        display: flex;
         justify-content: flex-end;
     }
 
     &[#{$grid-option-direction-name}~="x-content-between"] {
+        display: flex;
         justify-content: space-between;
     }
 
     &[#{$grid-option-direction-name}~="x-content-around"] {
+        display: flex;
         justify-content: space-around;
     }
 
     &[#{$grid-option-direction-name}~="y-content-start"] {
+        display: flex;
         align-content: flex-start;
     }
 
     &[#{$grid-option-direction-name}~="y-content-center"] {
+        display: flex;
         align-content: center;
     }
 
     &[#{$grid-option-direction-name}~="y-content-end"] {
+        display: flex;
         align-content: flex-end;
     }
 
     &[#{$grid-option-direction-name}~="y-items-start"] {
+        display: flex;
         align-items: flex-start;
     }
 
     &[#{$grid-option-direction-name}~="y-items-center"] {
+        display: flex;
         align-items: center;
     }
 
     &[#{$grid-option-direction-name}~="y-items-end"] {
+        display: flex;
         align-items: flex-end;
     }
 
