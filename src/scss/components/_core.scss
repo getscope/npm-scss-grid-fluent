@@ -1,37 +1,37 @@
 @charset "UTF-8";
 
 // Основные настройки модуля.
-.#{$grid-config-template-name} {
-    min-width: $grid-config-template-width-min;
-    width: $grid-config-template-width-default;
-    max-width: $grid-config-template-width-max;
+.#{$grid-config-module-name} {
+    min-width: $grid-config-module-width-min;
+    width: $grid-config-module-width-default;
+    max-width: $grid-config-module-width-max;
 
     // Настройки интервалов родительского элемента.
-    @for $i from 1 through $grid-config-template-count {
+    @for $i from 1 through $grid-config-module-count {
         &[#{$grid-option-spacing-name}~="t#{$i}"] {
-            padding-top: $grid-config-template-spacing-y * $i;
+            padding-top: $grid-config-module-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="r#{$i}"] {
-            padding-right: $grid-config-template-spacing-x * $i;
+            padding-right: $grid-config-module-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="b#{$i}"] {
-            padding-bottom: $grid-config-template-spacing-y * $i;
+            padding-bottom: $grid-config-module-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="l#{$i}"] {
-            padding-left: $grid-config-template-spacing-x * $i;
+            padding-left: $grid-config-module-spacing-x * $i;
         }
 
         &[#{$grid-option-spacing-name}~="y#{$i}"] {
-            padding-top: $grid-config-template-spacing-y * $i;
-            padding-bottom: $grid-config-template-spacing-y * $i;
+            padding-top: $grid-config-module-spacing-y * $i;
+            padding-bottom: $grid-config-module-spacing-y * $i;
         }
 
         &[#{$grid-option-spacing-name}~="x#{$i}"] {
-            padding-right: $grid-config-template-spacing-x * $i;
-            padding-left: $grid-config-template-spacing-x * $i;
+            padding-right: $grid-config-module-spacing-x * $i;
+            padding-left: $grid-config-module-spacing-x * $i;
         }
     }
 
