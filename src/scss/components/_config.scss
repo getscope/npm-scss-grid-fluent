@@ -1,18 +1,22 @@
 @charset "UTF-8";
 
-$grid-config-module-name: 'grid-module';
-$grid-config-module-prefix: 'mod-';
-$grid-config-module-width-default: 100%;
-$grid-config-module-width-min: 100%;
-$grid-config-module-count: 12;
-$grid-config-module-spacing: 8px;
+$grid-config-template-name: 'grid-template';
+$grid-config-template-prefix: 'template-';
+$grid-config-template-width-default: 100%;
+$grid-config-template-width-min: 100%;
+$grid-config-template-width-max: 100%;
+$grid-config-template-count: 12;
+$grid-config-template-spacing-x: 1%;
+$grid-config-template-spacing-y: 0.5%;
 
 $grid-config-region-name: 'grid-region';
 $grid-config-region-prefix: 'reg-';
 $grid-config-region-width-default: 100%;
 $grid-config-region-width-min: 100%;
+$grid-config-region-width-max: 100%;
 $grid-config-region-count: 12;
-$grid-config-region-spacing: 8px;
+$grid-config-region-spacing-x: 1%;
+$grid-config-region-spacing-y: 0.5%;
 
 $grid-config-string-name: 'grid-string';
 $grid-config-string-prefix: 'str-';
@@ -20,13 +24,17 @@ $grid-config-string-width-default: 100%;
 $grid-config-string-width-min: 1200px;
 $grid-config-string-width-max: 100%;
 $grid-config-string-count: 12;
-$grid-config-string-spacing: 8px;
+$grid-config-string-spacing-x: 1%;
+$grid-config-string-spacing-y: 0.5%;
 
 $grid-config-column-name: 'grid-column';
 $grid-config-column-prefix: 'col-';
 $grid-config-column-count: 12;
-$grid-config-column-spacing: 8px;
+$grid-config-column-spacing-x: 1%;
+$grid-config-column-spacing-y: 0.5%;
 
+$grid-option-type-name: 'data-grid-type';
+$grid-option-direction-name: 'data-grid-direction';
 $grid-option-size-name: 'data-grid-size';
 $grid-option-offset-name: 'data-grid-offset';
 $grid-option-spacing-name: 'data-grid-spacing';
